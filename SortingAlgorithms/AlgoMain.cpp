@@ -61,7 +61,7 @@ void AlgoMain::userInput()
     {
         std::cout << "Quick Sort" <<std::endl;
         inputArray();
-        Algorithm::quickSort(array, 0, arraySize);
+        Algorithm::quickSort(array, 0, arraySize - 1);
     }
     else if(i == 5)
     {

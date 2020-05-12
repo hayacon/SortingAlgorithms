@@ -82,14 +82,40 @@ int Algorithm::posMin(std::vector<double> array, int i, int arraySize)
 
 
 ///
-std::vector<double> Algorithm::quickSort(std::vector<double> array, int low, int high)
+std::vector<double> Algorithm::quickSort(std::vector<double> &array, int left, int right)
 {
+    if(left < right)
+    {
+        int pivotInt = partition(array, left, right);
+        quickSort(array, left, pivotInt - 1);
+        quickSort(array, pivotInt, right);
+    }
+
+    printArray(array);
     return array;
 }
 
-int Algorithm::partition(std::vector<double> array, int low, int high)
+int Algorithm::partition(std::vector<double> &array, int left, int right)
 {
-    int i;
+    int pivotIndex = left + (right - left) / 2;
+    int pivotValue = array[pivotIndex];
+    int i = left, j = right;
+    int temp;
+    while(i <= j) {
+        while(array[i] < pivotValue) {
+            i++;
+        }
+        while(array[j] > pivotValue) {
+            j--;
+        }
+        if(i <= j) {
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+            i++;
+            j--;
+        }
+    }
     return i;
 }
 
@@ -115,7 +141,7 @@ std::vector<double> Algorithm::mergeSort(std::vector<double> array)
       right = mergeSort(right);
       result = merge(left, right);
 
-    printArray(result);
+        printArray(result);
       return result;
 }
 

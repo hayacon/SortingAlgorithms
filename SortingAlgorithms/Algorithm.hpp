@@ -23,13 +23,13 @@ public:
     static std::vector<double> bubbleSort(std::vector<double> array, int arraySize);
     static std::vector<double> insertionSort(std::vector<double> array, int arraySize);
     static std::vector<double> selectionSort(std::vector<double> array, int arraySize);
-    static std::vector<double> quickSort(std::vector<double> array, int low, int high);
+    static std::vector<double> quickSort(std::vector<double> &array, int left, int right);
     static std::vector<double> mergeSort(std::vector<double> array);
 
 private:
     static void printArray(std::vector<double> array);
     static int posMin(std::vector<double> array, int i, int arraySize);
-    static int partition(std::vector<double> array, int low, int high);
+    static int partition(std::vector<double> &array, int left, int right);
     static std::vector<double> merge(std::vector<double> left, std::vector<double> right );
 
 
