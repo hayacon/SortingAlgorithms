@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #pragma once
+#include <vector>
 
 #endif /* AlgoMain_hpp */
 
@@ -19,6 +20,12 @@ class AlgoMain
 public:
     AlgoMain();
     void init();
-    void userInput();
     void userMenu();
+    void userInput();
+    std::vector<double> inputArray();
+
+private:
+    int arraySize;
+    std::vector<double> array;
+     
 };

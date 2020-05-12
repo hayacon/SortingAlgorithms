@@ -7,8 +7,11 @@
 //
 
 #include <iostream>
+#include "AlgoMain.hpp"
 
 int main() {
+    AlgoMain app{};
+    app.init();
 
     return 0;
 }
