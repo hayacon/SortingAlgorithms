@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC3E05CE24660E5700EEB197 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC3E05CD24660E5700EEB197 /* main.cpp */; };
-		CC3E05D72466112600EEB197 /* Algoritms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC3E05D52466112600EEB197 /* Algoritms.cpp */; };
+		CC3E05D72466112600EEB197 /* Algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC3E05D52466112600EEB197 /* Algorithm.cpp */; };
 		CC3E05DA2466115300EEB197 /* AlgoMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC3E05D82466115300EEB197 /* AlgoMain.cpp */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +28,8 @@
 		CC3E05CA24660E5700EEB197 /* SortingAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SortingAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3E05CD24660E5700EEB197 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC3E05D42466107500EEB197 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CC3E05D52466112600EEB197 /* Algoritms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Algoritms.cpp; sourceTree = "<group>"; };
-		CC3E05D62466112600EEB197 /* Algoritms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Algoritms.hpp; sourceTree = "<group>"; };
+		CC3E05D52466112600EEB197 /* Algorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm.cpp; sourceTree = "<group>"; };
+		CC3E05D62466112600EEB197 /* Algorithm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Algorithm.hpp; sourceTree = "<group>"; };
 		CC3E05D82466115300EEB197 /* AlgoMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AlgoMain.cpp; sourceTree = "<group>"; };
 		CC3E05D92466115300EEB197 /* AlgoMain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AlgoMain.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				CC3E05CD24660E5700EEB197 /* main.cpp */,
-				CC3E05D52466112600EEB197 /* Algoritms.cpp */,
-				CC3E05D62466112600EEB197 /* Algoritms.hpp */,
+				CC3E05D52466112600EEB197 /* Algorithm.cpp */,
+				CC3E05D62466112600EEB197 /* Algorithm.hpp */,
 				CC3E05D82466115300EEB197 /* AlgoMain.cpp */,
 				CC3E05D92466115300EEB197 /* AlgoMain.hpp */,
 			);
@@ -131,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3E05D72466112600EEB197 /* Algoritms.cpp in Sources */,
+				CC3E05D72466112600EEB197 /* Algorithm.cpp in Sources */,
 				CC3E05CE24660E5700EEB197 /* main.cpp in Sources */,
 				CC3E05DA2466115300EEB197 /* AlgoMain.cpp in Sources */,
 			);
