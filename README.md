@@ -7,6 +7,7 @@ This app contains following algorithms so far.......
 3. selection sort
 4. quick sort 
 5. merge sort
+6. counting sort
  
 * ( refrence : https://www.thepolyglotdeveloper.com/2019/04/sort-vector-integers-quicksort-algorithm-cpp/)
 
