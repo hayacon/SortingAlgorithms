@@ -25,6 +25,7 @@ public:
     static std::vector<double> selectionSort(std::vector<double> array, int arraySize);
     static std::vector<double> quickSort(std::vector<double> &array, int left, int right);
     static std::vector<double> mergeSort(std::vector<double> array);
+    static std::vector<double> countingSort(std::vector<double> array);
 
 private:
     static void printArray(std::vector<double> array);

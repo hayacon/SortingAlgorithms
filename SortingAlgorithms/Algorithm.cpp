@@ -120,31 +120,6 @@ int Algorithm::partition(std::vector<double> &array, int left, int right)
 }
 
 ///
-
-std::vector<double> Algorithm::mergeSort(std::vector<double> array)
-{
-    if (array.size() <= 1)
-         return array;
-
-      std::vector<double> left, right, result;
-      int middle = ((int)array.size()+ 1) / 2;
-
-      for (int i = 0; i < middle; i++) {
-         left.push_back(array[i]);
-      }
-
-      for (int i = middle; i < (int)array.size(); i++) {
-         right.push_back(array[i]);
-      }
-
-      left = mergeSort(left);
-      right = mergeSort(right);
-      result = merge(left, right);
-
-        printArray(result);
-      return result;
-}
-
 std::vector<double> Algorithm::merge(std::vector<double> left, std::vector<double> right)
 {
     std::vector<double> result;
@@ -171,6 +146,77 @@ std::vector<double> Algorithm::merge(std::vector<double> left, std::vector<doubl
 
     return result;
 }
+
+std::vector<double> Algorithm::mergeSort(std::vector<double> array)
+{
+    if (array.size() <= 1)
+         return array;
+
+      std::vector<double> left, right, result;
+      int middle = ((int)array.size()+ 1) / 2;
+
+      for (int i = 0; i < middle; i++) {
+         left.push_back(array[i]);
+      }
+
+      for (int i = middle; i < (int)array.size(); i++) {
+         right.push_back(array[i]);
+      }
+
+      left = mergeSort(left);
+      right = mergeSort(right);
+      result = merge(left, right);
+
+        printArray(result);
+      return result;
+}
+
+std::vector<double> Algorithm::countingSort(std::vector<double> array)
+{
+    // initialization
+    const double arraySize = array.size();
+    int max = 0;
+    int pos = 0;
+    for(int i = 0; i < arraySize; ++i)
+    {
+        if(array[i] > max) max = array[i];
+    }
+
+    std::vector<double> c;
+    std::vector<double> r;
+    for(int i = 0; i < arraySize; ++i)
+    {
+        r.push_back(0);
+    }
+
+    for(int i = 0; i < max + 1; ++i)
+    {
+        c.push_back(0);
+    }
+
+    // end of initialization
+
+    // count element
+    for(int i = 0; i < arraySize; ++i) c[array[i]] = c[array[i]] + 1;
+
+    // generating sorted array
+    for(int i = 0; i < c.size(); ++i)
+    {
+            while(c[i] != 0)
+            {
+                r[pos] = i;
+                c[i] = c[i] - 1;
+                pos += 1;
+            }
+
+    }
+
+    printArray(r);
+    return r;
+}
+
+
+
 
 void Algorithm::printArray(std::vector<double> array)
 {

@@ -30,6 +30,7 @@ void AlgoMain::userMenu()
     std::cout << "3 : Selection Sort" << std::endl;
     std::cout << "4 : Quick Sort" <<std::endl;
     std::cout << "5 : Merge Sort" <<std::endl;
+    std::cout << "6 : Counting Sort" <<std::endl;
     std::cout << "==============================" << std::endl;
     userInput();
 }
@@ -69,6 +70,11 @@ void AlgoMain::userInput()
         inputArray();
         Algorithm::mergeSort(array);
         
+    }else if(i == 6)
+    {
+        std::cout << "Counting Sort" <<std::endl;
+        inputArray();
+        Algorithm::countingSort(array);
     }else{
         std::cout << "Invalid input, please try again" <<std::endl;
         userMenu();
